@@ -30,7 +30,8 @@ export default function Sidebar() {
                   draggableId={`${x}-sideArea`}
                   index={i}
                 >
-                  {(provided) => (
+                  {(provided,snapshot) => (
+                    <>
                     <li
                       ref={provided.innerRef}
                       {...provided.draggableProps}
@@ -39,6 +40,13 @@ export default function Sidebar() {
                     >
                       {getComponent(x)}
                     </li>
+                      {snapshot.isDragging && (
+                        <div>
+                          {getComponent(x)}
+                        </div>
+                      )}
+                   
+                    </>
                   )}
                 </Draggable>
               );
@@ -64,7 +72,8 @@ export default function Sidebar() {
                   draggableId={`${x}-sideArea`}
                   index={i}
                 >
-                  {(provided) => (
+                  {(provided,snapshot) => (
+                    <>
                     <li
                       ref={provided.innerRef}
                       {...provided.draggableProps}
@@ -73,6 +82,12 @@ export default function Sidebar() {
                     >
                       {getComponent(x)}
                     </li>
+                    {snapshot.isDragging && (
+                        <div>
+                          {getComponent(x)}
+                        </div>
+                      )}
+                    </>
                   )}
                 </Draggable>
               );
@@ -98,7 +113,8 @@ export default function Sidebar() {
                   draggableId={`${x}-sideArea`}
                   index={i}
                 >
-                  {(provided) => (
+                  {(provided,snapshot) => (
+                    <>
                     <li
                       ref={provided.innerRef}
                       {...provided.draggableProps}
@@ -107,6 +123,12 @@ export default function Sidebar() {
                     >
                       {getComponent(x)}
                     </li>
+                    {snapshot.isDragging && (
+                        <div>
+                          {getComponent(x)}
+                        </div>
+                      )}
+                      </>
                   )}
                 </Draggable>
               );
@@ -132,7 +154,8 @@ export default function Sidebar() {
                   draggableId={`${x}-sideArea`}
                   index={i}
                 >
-                  {(provided) => (
+                  {(provided,snapshot) => (
+                    <>
                     <li
                       ref={provided.innerRef}
                       {...provided.draggableProps}
@@ -141,6 +164,12 @@ export default function Sidebar() {
                     >
                       {getComponent(x)}
                     </li>
+                    {snapshot.isDragging && (
+                        <div>
+                          {getComponent(x)}
+                        </div>
+                      )}
+                      </>
                   )}
                 </Draggable>
               );
